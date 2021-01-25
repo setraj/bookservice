@@ -9,7 +9,7 @@
 *.iws
 atlassia*
 out/
-
+.idea
 
 #Java File Extensions
 *.class
