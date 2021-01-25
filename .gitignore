@@ -1,0 +1,18 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+
+#IntelliJ Idea Paths
+.idea/
+*.iml
+*.uml
+*.iws
+atlassia*
+out/
+
+
+#Java File Extensions
+*.class
+*.jar
+*.war
+*.ear
