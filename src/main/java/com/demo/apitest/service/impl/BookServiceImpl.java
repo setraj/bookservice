@@ -6,6 +6,7 @@ import com.demo.apitest.repository.BookRepository;
 import com.demo.apitest.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -40,6 +41,7 @@ public class BookServiceImpl implements BookService {
         return bookRepository.findAllByAuthor(author);
     }
 
+    @Transactional
     @Override
     public void removeBook(String isbn) {
         Book book = getBookByIsbn(isbn);
@@ -47,5 +49,6 @@ public class BookServiceImpl implements BookService {
         bookRepository.deleteBookByIsbn(isbn);
         }
     }
+
 
 }

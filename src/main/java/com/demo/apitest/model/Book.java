@@ -1,15 +1,23 @@
 package com.demo.apitest.model;
 
 
-import org.springframework.data.annotation.Id;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
 
+
+@Entity
+@Table(uniqueConstraints={@UniqueConstraint(columnNames={"isbn"})})
 public class Book {
     @Id
     private String isbn;
+
     private String name;
     private String author;
     private float price;
 
+    public Book(){}
     public Book(String isbn, String name, String author, float price) {
         this.isbn = isbn;
         this.name = name;
